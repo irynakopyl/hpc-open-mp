@@ -1,6 +1,6 @@
 
 // C++ program to find adjoint and inverse of a matrix
-#include<stdio.h>		//Header file
+#include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
 #include<iostream>
@@ -107,9 +107,85 @@ int main()
     float inv[N][N];
     cout << "Input matrix is :\n";
     display(A);
+    cout << "\n1 thread"
+    opm_set_num_threads(1);
+    double start = opm_get_wtime();
     cout << "\nThe Inverse is :\n";
     if (inverse(A, inv))
         display(inv);
- 
+    double end = omp_get_wtime();
+    double time = end - start;
+    cout << "\nOmp Time:" << time << endl;
+   
+    cout << "\n2 threads"
+    opm_set_num_threads(2);
+    double start = opm_get_wtime();
+    cout << "\nThe Inverse is :\n";
+    if (inverse(A, inv))
+        display(inv);
+    double end = omp_get_wtime();
+    double time = end - start;
+    cout << "\nOmp Time:" << time << endl;
+
+    cout << "\n3 threads"
+    opm_set_num_threads(3);
+    double start = opm_get_wtime();
+    cout << "\nThe Inverse is :\n";
+    if (inverse(A, inv))
+        display(inv);
+    double end = omp_get_wtime();
+    double time = end - start;
+    cout << "\nOmp Time:" << time << endl;
+
+    cout << "\n4 threads"
+    opm_set_num_threads(4);
+    double start = opm_get_wtime();
+    cout << "\nThe Inverse is :\n";
+    if (inverse(A, inv))
+        display(inv);
+    double end = omp_get_wtime();
+    double time = end - start;
+    cout << "\nOmp Time:" << time << endl;
+
+    cout << "\n5 threads"
+    opm_set_num_threads(5);
+    double start = opm_get_wtime();
+    cout << "\nThe Inverse is :\n";
+    if (inverse(A, inv))
+        display(inv);
+    double end = omp_get_wtime();
+    double time = end - start;
+    cout << "\nOmp Time:" << time << endl;
+
+    cout << "\n6 threads"
+    opm_set_num_threads(6);
+    double start = opm_get_wtime();
+    cout << "\nThe Inverse is :\n";
+    if (inverse(A, inv))
+        display(inv);
+    double end = omp_get_wtime();
+    double time = end - start;
+    cout << "\nOmp Time:" << time << endl;
+
+    cout << "\n7 threads"
+    opm_set_num_threads(7);
+    double start = opm_get_wtime();
+    cout << "\nThe Inverse is :\n";
+    if (inverse(A, inv))
+        display(inv);
+    double end = omp_get_wtime();
+    double time = end - start;
+    cout << "\nOmp Time:" << time << endl;
+
+    cout << "\n8 threads"
+    opm_set_num_threads(8);
+    double start = opm_get_wtime();
+    cout << "\nThe Inverse is :\n";
+    if (inverse(A, inv))
+        display(inv);
+    double end = omp_get_wtime();
+    double time = end - start;
+    cout << "\nOmp Time:" << time << endl;
     return 0;
+
 }
